@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>5×5 Random Modular Glyph (SVG)</title>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; padding: 16px; }
+    .row { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    input { padding:6px 8px; width:240px; font-size:14px; }
+    button { padding:6px 10px; cursor:pointer; font-size:14px; }
+   #stage {  margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;}
+    svg.glyph { border: 1px solid #ddd; padding: 1px; box-sizing: border-box;}
+
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <input id="text" value="SEMINAR" />
+    <button id="regen">Regenerate</button>
+    <span style="color:#666;">5×5 grid · no same shape in 8-neighborhood</span>
+  </div>
+
+  <!-- =======================
+       YOUR 15 SVG SHAPES HERE
+       ======================= -->
+  <svg width="0" height="0" style="position:absolute; left:-9999px;">
+    <defs>
+      <!-- 下面是占位示例：你用自己的 15 个图形替换即可 -->
+      <symbol id="s1" viewBox="0 0 144 144">
+        <polygon fill="#231f20"
+        points="128.75 59.16 84.84 59.16 84.84 15.25 59.16 15.25 59.16 59.16 15.25 59.16 15.25 84.84 59.16 84.84 59.16 128.75 84.84 128.75 84.84 84.84 128.75 84.84 128.75 59.16"/>
+      </symbol>
+      <symbol id="s2" viewBox="0 0 144 144">
+        <rect
+        x="51.73" y="-8.24"
+        width="40.53" height="160.47"
+        rx="20.27" ry="20.27"
+        transform="translate(-29.82 72) rotate(-45)"
+        fill="#231f20"
+        />
+        <rect
+      x="51.73" y="-8.24"
+      width="40.53" height="160.47"
+      rx="20.27" ry="20.27"
+      transform="translate(72 -29.82) rotate(45)"
+      fill="#231f20"
+      />
+      </symbol>
+      <symbol id="s3" viewBox="0 0 144 144">
+  <!-- 中心实心方块 -->
+  <rect
+    x="52.27"
+    y="52.27"
+    width="39.45"
+    height="39.45"
+    fill="#231f20"
+  />
+
+  <!-- 外框 -->
+  <path
+    d="M118.67 25.33v93.34H25.33V25.33h93.34
+       M134.67 9.33H9.33v125.34h125.34V9.33Z"
+    fill="#231f20"
+  />
+</symbol>
+<symbol id="s4" viewBox="0 0 144 144">
+  <rect x="9.33"  y="9.33" width="21.53" height="125.34" fill="#231f20"/>
+  <rect x="43.93" y="9.33" width="21.53" height="125.34" fill="#231f20"/>
+  <rect x="78.54" y="9.33" width="21.53" height="125.34" fill="#231f20"/>
+  <rect x="113.14" y="9.33" width="21.53" height="125.34" fill="#231f20"/>
+</symbol>
+<symbol id="s5" viewBox="0 0 144 144">
+  <polygon
+    fill="#231f20"
+    points="
+      134.67 30.86 134.67 9.33 72 9.33 72 20.09
+      9.33 20.09 9.33 41.62 72 41.62 72 51.11
+      9.33 51.11 9.33 72.64 72 72.64 72 82.13
+      9.33 82.13 9.33 103.65 72 103.65 72 113.14
+      9.33 113.14 9.33 134.67 72 134.67 72 123.91
+      134.67 123.91 134.67 102.38 72 102.38 72 92.89
+      134.67 92.89 134.67 71.36 72 71.36 72 61.87
+      134.67 61.87 134.67 40.35 72 40.35 72 30.86
+      134.67 30.86
+    "
+  />
+</symbol>
+<symbol id="s6" viewBox="0 0 144 144">
+  <path
+    fill="#231f20"
+    d="M9.33 19.7v106.5c0 5.2 4.22 9.42 9.42 9.42h106.5c5.2 0 9.42-4.22 9.42-9.42V19.7c0-5.2-4.22-9.42-9.42-9.42H18.75c-5.2 0-9.42 4.22-9.42 9.42ZM78.13 103.7c-22.08 4.18-41.07-14.81-36.89-36.89 2.34-12.33 12.28-22.28 24.62-24.62 22.08-4.19 41.07 14.81 36.89 36.89-2.34 12.33-12.29 22.28-24.62 24.62Z"
+  />
+</symbol>
+
+<symbol id="s7" viewBox="0 0 144 144">
+  <circle
+    cx="72"
+    cy="72"
+    r="62.67"
+    fill="#231f20"
+  />
+</symbol>
+
+<symbol id="s8" viewBox="0 0 144 144">
+  <path
+    fill="#231f20"
+    d="M15.25 15.25v113.51h113.51V15.25H15.25ZM106.25 79.75h-26.5v26.5h-15.5v-26.5h-26.5v-15.5h26.5v-26.5h15.5v26.5h26.5v15.5Z"
+  />
+</symbol>
+<symbol id="s9" viewBox="0 0 144 144">
+  <polygon
+    fill="#231f20"
+    points="61.59 33.17 43.66 33.17 43.66 15.25 33.17 15.25 33.17 33.17 15.25 33.17 15.25 43.66 33.17 43.66 33.17 61.59 43.66 61.59 43.66 43.66 61.59 43.66 61.59 33.17"
+  />
+  <polygon
+    fill="#231f20"
+    points="128.75 33.17 110.83 33.17 110.83 15.25 100.34 15.25 100.34 33.17 82.41 33.17 82.41 43.66 100.34 43.66 100.34 61.59 110.83 61.59 110.83 43.66 128.75 43.66 128.75 33.17"
+  />
+  <polygon
+    fill="#231f20"
+    points="61.59 100.34 43.66 100.34 43.66 82.41 33.17 82.41 33.17 100.34 15.25 100.34 15.25 110.83 33.17 110.83 33.17 128.75 43.66 128.75 43.66 110.83 61.59 110.83 61.59 100.34"
+  />
+  <polygon
+    fill="#231f20"
+    points="128.75 100.34 110.83 100.34 110.83 82.41 100.34 82.41 100.34 100.34 82.41 100.34 82.41 110.83 100.34 110.83 100.34 128.75 110.83 128.75 110.83 110.83 128.75 110.83 128.75 100.34"
+  />
+</symbol>
+
+<symbol id="s10" viewBox="0 0 144 144">
+  <circle
+    cx="103.34"
+    cy="40.66"
+    r="31.34"
+    fill="#231f20"
+  />
+  <circle
+    cx="40.66"
+    cy="40.66"
+    r="31.34"
+    fill="#231f20"
+  />
+  <circle
+    cx="103.34"
+    cy="103.34"
+    r="31.34"
+    fill="#231f20"
+  />
+  <circle
+    cx="40.66"
+    cy="103.34"
+    r="31.34"
+    fill="#231f20"
+  />
+</symbol>
+<symbol id="s11" viewBox="0 0 144 144">
+  <path
+    fill="#231f20"
+    d="M127.67 80.46h-35.67c-1.62 0-2.93-1.31-2.93-2.93v-11.36c0-1.62 1.31-2.93 2.93-2.93h35.67c3.87 0 7-3.13 7-7V16.33c0-3.87-3.13-7-7-7h-39.91c-3.87 0-7 3.13-7 7v35.67c0 1.62-1.31 2.93-2.93 2.93h-11.65c-1.62 0-2.93-1.31-2.93-2.93V16.63c0-3.87-3.13-7-7-7H16.33c-3.87 0-7 3.13-7 7v39.91c0 3.87 3.13 7 7 7h35.67c1.62 0 2.93 1.31 2.93 2.93v11.36c0 1.62-1.31 2.93-2.93 2.93H16.33c-3.87 0-7 3.13-7 7v39.91c0 3.87 3.13 7 7 7h39.91c3.87 0 7-3.13 7-7v-35.67c0-1.62 1.31-2.93 2.93-2.93h11.65c1.62 0 2.93 1.31 2.93 2.93v35.37c0 3.87 3.13 7 7 7h39.92c3.87 0 7-3.13 7-7v-39.91c0-3.87-3.13-7-7-7Z"
+  />
+</symbol>
+<symbol id="s12" viewBox="0 0 144 144">
+  <path
+    fill="#231f20"
+    d="M72 25.33c25.73 0 46.67 20.94 46.67 46.67s-20.94 46.67-46.67 46.67-46.67-20.94-46.67-46.67 20.94-46.67 46.67-46.67M72 9.33c-34.61 0-62.67 28.06-62.67 62.67s28.06 62.67 62.67 62.67 62.67-28.06 62.67-62.67S106.61 9.33 72 9.33h0Z"
+  />
+  <circle
+    cx="72"
+    cy="72"
+    r="37.56"
+    fill="#231f20"
+  />
+</symbol>
+<symbol id="s13" viewBox="0 0 144 144">
+  <circle cx="72"    cy="25.26"  r="16.08" fill="#231f20"/>
+  <circle cx="72"    cy="72"     r="16.08" fill="#231f20"/>
+  <circle cx="72"    cy="118.74" r="16.08" fill="#231f20"/>
+  <circle cx="25.26" cy="72"     r="16.08" fill="#231f20"/>
+  <circle cx="118.74" cy="72"    r="16.08" fill="#231f20"/>
+</symbol>
+
+<symbol id="s14" viewBox="0 0 144 144">
+  <rect x="9.33"   y="9.33"   width="25.02" height="25.02" fill="#231f20"/>
+  <rect x="59.49"  y="59.49"  width="25.02" height="25.02" fill="#231f20"/>
+  <rect x="9.33"   y="109.65" width="25.02" height="25.02" fill="#231f20"/>
+  <rect x="109.65" y="9.33"   width="25.02" height="25.02" fill="#231f20"/>
+  <rect x="109.65" y="109.65" width="25.02" height="25.02" fill="#231f20"/>
+</symbol>
+<symbol id="s15" viewBox="0 0 144 144">
+  <!-- 内层框 -->
+  <path
+    fill="#231f20"
+    d="M93.65 50.35v43.31h-43.31v-43.31h43.31
+       M109.65 34.35H34.35v75.31h75.31V34.35Z"
+  />
+
+  <!-- 外层框 -->
+  <path
+    fill="#231f20"
+    d="M118.67 25.33v93.34H25.33V25.33h93.34
+       M134.67 9.33H9.33v125.34h125.34V9.33Z"
+  />
+</symbol>
+
+      
+      
+  </defs>
+  </svg>
+
+  <div id="stage"></div>
+
+<script>
+/* ================= CONFIG ================= */
+const GRID = 5;              // ✅ 改成 5×5
+const CELL = 20;             // 每格像素（你可调大/调小）
+const PAD  = 4;             // 外边距
+const GLYPH_GAP = 20;        // 字母之间间距（stage 的 gap 也能控制）
+
+const SHAPES = Array.from({ length: 15 }, (_, i) => `s${i + 1}`);
+
+const N8 = [
+  [-1,-1],[-1,0],[-1,1],
+  [ 0,-1],       [ 0,1],
+  [ 1,-1],[ 1,0],[ 1,1],
+];
+const inBounds = (r,c)=> r>=0 && r<GRID && c>=0 && c<GRID;
+
+/* ================= LETTER TEMPLATES (5×5) =================
+   用 1 表示“这个格子属于字母”，0 表示空白
+   你要“按照你图的字母形态”，就把下面每个字母的 5 行字符串改成你的版本。
+*/
+const letters = {
+  // 示例：偏“构成骨架”的 5×5
+  "A": [
+  "00100",
+  "01010",
+  "10001",
+  "11111",
+  "10001",
+],
+  "B": [
+    "11110",
+    "10001",
+    "11110",
+    "10001",
+    "11110",
+  ],
+  "C": [
+    "01111",
+    "10000",
+    "10000",
+    "10000",
+    "01111",
+  ],
+  "D": [
+    "11110",
+    "10001",
+    "10001",
+    "10001",
+    "11110",
+  ],
+  "E": [
+    "11111",
+    "10000",
+    "11110",
+    "10000",
+    "11111",
+  ],
+  "F": [
+    "11111",
+    "10000",
+    "11110",
+    "10000",
+    "10000",
+  ],
+  "G": [
+    "01110",
+    "10000",
+    "10011",
+    "10001",
+    "01111",
+  ],
+
+  "H": [
+    "10001",
+    "10001",
+    "11111",
+    "10001",
+    "10001",
+  ],
+  "I": [
+    "11111",
+    "00100",
+    "00100",
+    "00100",
+    "11111",
+  ],
+  "J": [
+  "00001",
+  "00001",
+  "00001",
+  "10001",
+  "01110",
+],
+"K": [
+  "10001",
+  "10010",
+  "11100",
+  "10010",
+  "10001",
+],
+"L": [
+  "10000",
+  "10000",
+  "10000",
+  "10000",
+  "11111",
+],
+"M": [
+  "10001",
+  "11011",
+  "10101",
+  "10001",
+  "10001",
+],
+"N": [
+  "10001",
+  "11001",
+  "10101",
+  "10011",
+  "10001",
+],
+  "O": [
+    "01110",
+    "10001",
+    "10001",
+    "10001",
+    "01110",
+  ],
+"P": [
+  "11110",
+  "10001",
+  "11110",
+  "10000",
+  "10000",
+],
+"Q": [
+  "01110",
+  "10001",
+  "10001",
+  "10011",
+  "01111",
+],
+"R": [
+  "11110",
+  "10001",
+  "11110",
+  "10010",
+  "10001",
+],
+"S": [
+  "01111",
+  "10000",
+  "01110",
+  "00001",
+  "11110",
+],
+"T": [
+  "11111",
+  "00100",
+  "00100",
+  "00100",
+  "00100",
+],
+"U": [
+  "10001",
+  "10001",
+  "10001",
+  "10001",
+  "01110",
+],
+"V": [
+  "10001",
+  "10001",
+  "01010",
+  "01010",
+  "00100",
+],
+"W": [
+  "10001",
+  "10001",
+  "10101",
+  "11011",
+  "10001",
+],
+"X": [
+  "10001",
+  "01010",
+  "00100",
+  "01010",
+  "10001",
+],
+"Y": [
+  "10001",
+  "01010",
+  "00100",
+  "00100",
+  "00100",
+],
+"Z": [
+  "11111",
+  "00010",
+  "00100",
+  "01000",
+  "11111",
+],
+  // 空格
+  " ": [
+    "00000",
+    "00000",
+    "00000",
+    "00000",
+    "00000",
+  ],
+};
+
+/* ================= SOLVER (8-neighborhood no-repeat) ================= */
+function templateToCells(tpl){
+  const cells=[];
+  for(let r=0;r<GRID;r++){
+    for(let c=0;c<GRID;c++){
+      if(tpl[r][c]==="1") cells.push({r,c});
+    }
+  }
+  return cells;
+}
+
+function shuffle(arr){
+  const a = [...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+// 启发式：先填邻居多的格子，减少失败概率
+function degree(tpl, cell){
+  let d=0;
+  for(const [dr,dc] of N8){
+    const rr=cell.r+dr, cc=cell.c+dc;
+    if(inBounds(rr,cc) && tpl[rr][cc]==="1") d++;
+  }
+  return d;
+}
+
+function solveFill(tpl){
+  const assigned = Array.from({length:GRID},()=>Array(GRID).fill(null));
+  const cells = templateToCells(tpl).sort((a,b)=>degree(tpl,b)-degree(tpl,a));
+
+  function candidates(cell){
+    const used = new Set();
+    for(const [dr,dc] of N8){
+      const rr=cell.r+dr, cc=cell.c+dc;
+      if(inBounds(rr,cc) && assigned[rr][cc]) used.add(assigned[rr][cc]);
+    }
+    return shuffle(SHAPES.filter(s=>!used.has(s)));
+  }
+
+  function backtrack(i){
+    if(i===cells.length) return true;
+    const cell = cells[i];
+    for(const s of candidates(cell)){
+      assigned[cell.r][cell.c]=s;
+      if(backtrack(i+1)) return true;
+      assigned[cell.r][cell.c]=null;
+    }
+    return false;
+  }
+
+  const ok = backtrack(0);
+  if(!ok) throw new Error("No solution. (Try: more shapes, or fewer filled cells.)");
+  return assigned;
+}
+
+/* ================= RENDER SVG ================= */
+function makeGlyphSVG(tpl){
+  const size = PAD*2 + GRID*CELL;
+  const svgns = "http://www.w3.org/2000/svg";
+
+  const svg = document.createElementNS(svgns,"svg");
+  svg.setAttribute("class","glyph");
+  svg.setAttribute("width", size);
+  svg.setAttribute("height", size);
+  svg.setAttribute("viewBox", `0 0 ${size} ${size}`);
+
+  // grid lines
+  for(let i=0;i<=GRID;i++){
+    const p = PAD + i*CELL;
+
+    const h = document.createElementNS(svgns,"line");
+    h.setAttribute("x1", PAD);
+    h.setAttribute("y1", p);
+    h.setAttribute("x2", PAD+GRID*CELL);
+    h.setAttribute("y2", p);
+    h.setAttribute("stroke","#d0d0d0");
+    h.setAttribute("stroke-width","1");
+    svg.appendChild(h);
+
+    const v = document.createElementNS(svgns,"line");
+    v.setAttribute("x1", p);
+    v.setAttribute("y1", PAD);
+    v.setAttribute("x2", p);
+    v.setAttribute("y2", PAD+GRID*CELL);
+    v.setAttribute("stroke","#d0d0d0");
+    v.setAttribute("stroke-width","1");
+    svg.appendChild(v);
+  }
+
+  const assigned = solveFill(tpl);
+
+  // place symbols
+  for(let r=0;r<GRID;r++){
+    for(let c=0;c<GRID;c++){
+      if(tpl[r][c] !== "1") continue;
+
+      const g = document.createElementNS(svgns,"g");
+      g.setAttribute("transform",`translate(${PAD+c*CELL},${PAD+r*CELL})`);
+
+      // inner margin inside each cell
+      const inner = document.createElementNS(svgns,"svg");
+      inner.setAttribute("x", CELL*0.12);
+      inner.setAttribute("y", CELL*0.12);
+      inner.setAttribute("width", CELL*0.76);
+      inner.setAttribute("height", CELL*0.76);
+      inner.setAttribute("viewBox","0 0 100 100");
+
+
+
+      const use = document.createElementNS(svgns,"use");
+      use.setAttribute("href",`#${assigned[r][c]}`);
+
+      inner.appendChild(use);
+      g.appendChild(inner);
+      svg.appendChild(g);
+    }
+  }
+
+  return svg;
+}
+
+function renderText(str){
+  const stage = document.getElementById("stage");
+  stage.innerHTML = "";
+  const text = (str || "").toUpperCase();
+
+  for(const ch of text){
+    const tpl = letters[ch] || letters[" "];
+    stage.appendChild(makeGlyphSVG(tpl));
+  }
+}
+
+document.getElementById("regen").onclick = ()=>{
+  renderText(document.getElementById("text").value);
+};
+
+renderText(document.getElementById("text").value);
+</script>
+</body>
+</html>
