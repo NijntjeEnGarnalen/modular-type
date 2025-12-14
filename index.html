@@ -18,15 +18,12 @@
   <div class="row">
     <input id="text" value="SEMINAR" />
     <button id="regen">Regenerate</button>
-    <span style="color:#666;">5×5 grid · no same shape in 8-neighborhood</span>
+    
   </div>
 
-  <!-- =======================
-       YOUR 15 SVG SHAPES HERE
-       ======================= -->
   <svg width="0" height="0" style="position:absolute; left:-9999px;">
     <defs>
-      <!-- 下面是占位示例：你用自己的 15 个图形替换即可 -->
+      <!-- 15 svg -->
       <symbol id="s1" viewBox="0 0 144 144">
         <polygon fill="#231f20"
         points="128.75 59.16 84.84 59.16 84.84 15.25 59.16 15.25 59.16 59.16 15.25 59.16 15.25 84.84 59.16 84.84 59.16 128.75 84.84 128.75 84.84 84.84 128.75 84.84 128.75 59.16"/>
@@ -48,7 +45,7 @@
       />
       </symbol>
       <symbol id="s3" viewBox="0 0 144 144">
-  <!-- 中心实心方块 -->
+
   <rect
     x="52.27"
     y="52.27"
@@ -57,7 +54,6 @@
     fill="#231f20"
   />
 
-  <!-- 外框 -->
   <path
     d="M118.67 25.33v93.34H25.33V25.33h93.34
        M134.67 9.33H9.33v125.34h125.34V9.33Z"
@@ -187,14 +183,13 @@
   <rect x="109.65" y="109.65" width="25.02" height="25.02" fill="#231f20"/>
 </symbol>
 <symbol id="s15" viewBox="0 0 144 144">
-  <!-- 内层框 -->
+
   <path
     fill="#231f20"
     d="M93.65 50.35v43.31h-43.31v-43.31h43.31
        M109.65 34.35H34.35v75.31h75.31V34.35Z"
   />
 
-  <!-- 外层框 -->
   <path
     fill="#231f20"
     d="M118.67 25.33v93.34H25.33V25.33h93.34
@@ -210,11 +205,11 @@
   <div id="stage"></div>
 
 <script>
-/* ================= CONFIG ================= */
-const GRID = 5;              // ✅ 改成 5×5
-const CELL = 20;             // 每格像素（你可调大/调小）
-const PAD  = 4;             // 外边距
-const GLYPH_GAP = 20;        // 字母之间间距（stage 的 gap 也能控制）
+
+const GRID = 5;              
+const CELL = 20;
+const PAD  = 4;
+const GLYPH_GAP = 20;
 
 const SHAPES = Array.from({ length: 15 }, (_, i) => `s${i + 1}`);
 
@@ -225,12 +220,7 @@ const N8 = [
 ];
 const inBounds = (r,c)=> r>=0 && r<GRID && c>=0 && c<GRID;
 
-/* ================= LETTER TEMPLATES (5×5) =================
-   用 1 表示“这个格子属于字母”，0 表示空白
-   你要“按照你图的字母形态”，就把下面每个字母的 5 行字符串改成你的版本。
-*/
 const letters = {
-  // 示例：偏“构成骨架”的 5×5
   "A": [
   "00100",
   "01010",
@@ -414,7 +404,7 @@ const letters = {
   "01000",
   "11111",
 ],
-  // 空格
+  // space
   " ": [
     "00000",
     "00000",
@@ -424,7 +414,7 @@ const letters = {
   ],
 };
 
-/* ================= SOLVER (8-neighborhood no-repeat) ================= */
+
 function templateToCells(tpl){
   const cells=[];
   for(let r=0;r<GRID;r++){
@@ -444,7 +434,7 @@ function shuffle(arr){
   return a;
 }
 
-// 启发式：先填邻居多的格子，减少失败概率
+
 function degree(tpl, cell){
   let d=0;
   for(const [dr,dc] of N8){
@@ -483,7 +473,7 @@ function solveFill(tpl){
   return assigned;
 }
 
-/* ================= RENDER SVG ================= */
+
 function makeGlyphSVG(tpl){
   const size = PAD*2 + GRID*CELL;
   const svgns = "http://www.w3.org/2000/svg";
